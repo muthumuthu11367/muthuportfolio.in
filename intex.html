@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muthu — Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Professional Full-Stack Developer specializing in building modern web applications, scalable backends, and responsive user interfaces.">
+    <meta name="keywords" content="Full-Stack Developer, Frontend Developer, Backend Developer, Web Developer, JavaScript, React, Java, Python">
+    <meta name="author" content="Muthu">
+    <meta name="theme-color" content="#030712">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Muthu — Full-Stack Developer Portfolio">
+    <meta property="og:description" content="Explore my projects, skills, certifications, and professional background.">
+    <meta property="og:image" content="./assets/images/profile/profile.jpg">
+    <meta property="og:url" content="https://example.com">
+    <link rel="canonical" href="#contact">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Page Loading Animation Overlay -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav__logo">
+                <span class="logo-icon">&lt;/&gt;</span> Muthu
+            </a>
+
+            <div class="nav__menu" id="navMenu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Reviews</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+                <div class="nav__close" id="navClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+                    <i class="fa-solid fa-moon sun-icon"></i>
+                    <i class="fa-solid fa-sun moon-icon"></i>
+                </button>
+
+                <!-- Mobile Hamburger Menu Toggle -->
+                <div class="nav__toggle" id="navToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__container container grid">
+                <div class="hero__content reveal-left">
+                    <span class="hero__subtitle">Welcome to my portfolio</span>
+                    <h1 class="hero__title">Hi, I'm <span class="highlight">Muthu</span></h1>
+                    <p class="hero__role-wrapper">I am a <span class="typed-text" id="typedText"></span><span class="cursor"></span></p>
+                    <p class="hero__description">
+                        Creating modern and responsive web applications with clean code, smooth design, and reliable performance.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./assets/resume/resume.pdf" class="btn btn-outline" download="Muthu_Resume.pdf">Download Resume <i class="fa-solid fa-download"></i></a>
+                    </div>
+                    <div class="hero__socials">
+                        <a href="https://github.com/muthumuthu11367" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muthu-t-a9b700336/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/18_muthu_23/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        
+                    </div>
+                </div>
+
+                <div class="hero__img-wrapper reveal-right">
+                    <div class="hero__glow-bg"></div>
+                    <div class="profile-card">
+                        <img src="./assets/Muthu Photo.jpeg" alt="Muthu Profile Photo" class="profile-img">
+                    </div>
+                    <div class="floating-badge badge-1">
+                        <i class="fa-solid fa-code"></i> <span>Full-Stack</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fa-solid fa-shield-halved"></i> <span>Secure Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <span class="section__subtitle">Get to know me</span>
+                    <h2 class="section__title">
+Architecting Code with Passion & Precision</h2>
+                </div>
+
+                <div class="about__container grid">
+                    <div class="about__text reveal-left">
+                        <h3>Passionate Full-Stack Engineer & Designer</h3>
+                        <p>
+                           I am a Full Stack Developer with experience in building complete web applications. I can work on both frontend and backend development. I create responsive and user-friendly websites, build APIs, and work with databases. I enjoy learning new technologies and creating simple, fast, and reliable web applications.
+
+                        </p>
+                        <p>
+                            <strong>Career Objective:</strong> To use my full stack development skills to build modern, responsive, and user-friendly web applications. I want to improve my technical skills, learn new technologies, and grow as a professional Full Stack Developer.
+                        </p>
+                        <div class="about__strengths">
+                            <span class="strength-tag"><i class="fa-solid fa-check"></i> Clean Code Architecture</span>
+                            <span class="strength-tag"><i class="fa-solid fa-check"></i> UI/UX Focus</span>
+                            <span class="strength-tag"><i class="fa-solid fa-check"></i> Problem Solver</span>
+                            <span class="strength-tag"><i class="fa-solid fa-check"></i> Agile Collaborator</span>
+                        </div>
+                    </div>
+
+                    <div class="about__stats reveal-right">
+                        <div class="stat__card">
+                            <i class="fa-solid fa-folder-open stat__icon"></i>
+                            <h3 class="stat__number" data-target="10">0</h3>
+                            <p class="stat__label">Projects Completed</p>
+                        </div>
+                        <div class="stat__card">
+                            <i class="fa-solid fa-brain stat__icon"></i>
+                            <h3 class="stat__number" data-target="15">0</h3>
+                            <p class="stat__label">Technologies Learned</p>
+                        </div>
+                        <div class="stat__card">
+                            <i class="fa-solid fa-award stat__icon"></i>
+                            <h3 class="stat__number" data-target="12">0</h3>
+                            <p class="stat__label">Certificates Earned</p>
+                        </div>
+                        <div class="stat__card">
+                            <i class="fa-solid fa-clock stat__icon"></i>
+                            <h3 class="stat__number" data-target="14">0</h3>
+                            <p class="stat__label">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education section" id="education">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <h2 class="section__title">Education & Degrees</h2>
+                    <span class="section__subtitle">Mechanical Engineering degree and Full-Stack Development training</span>
+                </div>
+
+                <div class="timeline__container reveal-up">
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2020 – 2024</span>
+                            <h3 class="timeline__title">Bachelor of Mechanical Engineering</h3>
+                            <h4 class="timeline__institution">M.R.K Institute of Technology</h4>
+                            <p class="timeline__location"><i class="fa-solid fa-location-dot"></i>Tamil Nadu, India</p>
+                            <p class="timeline__grade">CGPA: 7.67</p>
+                            <p class="timeline__desc">Focused on thermodynamics, fluid mechanics, manufacturing processes, machine design, heat transfer, and core mechanical engineering principles.
+</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2019 – 2020</span>
+                            <h3 class="timeline__title">High School — Science & Mathematics</h3>
+                            <h4 class="timeline__institution">T.G.N Municipal High secondary School</h4>
+                            <p class="timeline__location"><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+                            <p class="timeline__grade">Percentage: 60%</p>
+                            <p class="timeline__desc">Graduated with honors, specialized in advanced mathematics, physics, and introductory programming courses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience section" id="experience">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <span class="section__subtitle">Work Experience</span>
+                    <h2 class="section__title">Professional Experience</h2>
+                </div>
+
+                <div class="timeline__container reveal-up">
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">7-02-2025 – 19-08-2025 </span>
+                            <h3 class="timeline__title">Software Engineer </h3>
+                            <h4 class="timeline__institution">Office-Hub-Tech.</h4>
+                            <p class="timeline__location"><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India (Remote)</p>
+                            <p class="timeline__employment">Full-time</p>
+                            <div class="timeline__techs">
+                                <span>ZOho CRM</span><span>Zoho deluge</span><span>Zoho Creator</span><span>Zoho sites</span>
+                            </div>
+                            <ul class="timeline__list">
+                                <li>Developed and maintained responsive websites using Zoho Sites based on client requirements.</li>
+                                <li>Improved user interface design, layout alignment, and overall website functionality.</li>
+                                <li>Identified and resolved front-end issues through debugging and cross-browser testing.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2025 – 2026</span>
+                            <h3 class="timeline__title">Frontend Web Developer</h3>
+                            <h4 class="timeline__institution"></h4>
+                            <p class="timeline__location"><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p>
+                            <p class="timeline__employment">Full-time</p>
+                            <div class="timeline__techs">
+                                <span>JavaScript (ES6+)</span><span>CSS3</span><span>HTML5</span><span>Git</span><span>React JS</span> <span>Python</span><span>Django</span>
+                            </div>
+                            <ul class="timeline__list">
+                                <li>Designed and developed responsive user interfaces for three supermarket websites using React, HTML, CSS, and JavaScript.</li>
+                                <li>Built custom frontend and integrated dynamic features for a jewellery shop and an interior design website, ensuring a polished user experience.</li>
+                                <li>Implemented backend solutions and database management using Firebase and MongoDB to support data-driven applications.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <h2 class="section__title">Skills and Technologies</h2>
+                    <span class="section__subtitle">Comprehensive technical toolset across frontend, backend, databases.</span>
+                </div>
+
+                <div class="skills__container grid">
+                    <!-- Frontend Category -->
+                    <div class="skills__category reveal-up">
+                        <h3 class="skills__category-title"><i class="fa-solid fa-laptop-code"></i> Frontend Development</h3>
+                        <div class="skills__grid">
+                            <div class="skill__card">
+                                <i class="fa-brands fa-html5 skill__icon" style="color: #E34F26;"></i>
+                                <span class="skill__name">HTML5</span>
+                                <span class="skill__level">95%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-css3-alt skill__icon" style="color: #1572B6;"></i>
+                                <span class="skill__name">CSS3</span>
+                                <span class="skill__level">90%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-js skill__icon" style="color: #F7DF1E;"></i>
+                                <span class="skill__name">JavaScript</span>
+                                <span class="skill__level">88%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-react skill__icon" style="color: #61DAFB;"></i>
+                                <span class="skill__name">React</span>
+                                <span class="skill__level">85%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-angular skill__icon" style="color: #DD0031;"></i>
+                                <span class="skill__name">Angular</span>
+                                <span class="skill__level">75%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Category -->
+                    <div class="skills__category reveal-up">
+                        <h3 class="skills__category-title"><i class="fa-solid fa-server"></i> Backend & Database</h3>
+                        <div class="skills__grid">
+                            <div class="skill__card">
+                                <i class="fa-brands fa-java skill__icon" style="color: #007396;"></i>
+                                <span class="skill__name">Java</span>
+                                <span class="skill__level">75%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-python skill__icon" style="color: #3776AB;"></i>
+                                <span class="skill__name">Python</span>
+                                <span class="skill__level">75%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-node-js skill__icon" style="color: #339933;"></i>
+                                <span class="skill__name">Node.js</span>
+                                <span class="skill__level">75%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-solid fa-database skill__icon" style="color: #4479A1;"></i>
+                                <span class="skill__name">MySQL</span>
+                                <span class="skill__level">70%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-solid fa-seedling skill__icon" style="color: #47A248;"></i>
+                                <span class="skill__name">MongoDB</span>
+                                <span class="skill__level">80%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & DevOps Category -->
+                    <div class="skills__category reveal-up">
+                        <h3 class="skills__category-title"><i class="fa-solid fa-toolbox"></i> Tools & Cloud</h3>
+                        <div class="skills__grid">
+                            <div class="skill__card">
+                                <i class="fa-brands fa-git-alt skill__icon" style="color: #F05032;"></i>
+                                <span class="skill__name">Git</span>
+                                <span class="skill__level">90%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-github skill__icon" style="color: var(--text-color);"></i>
+                                <span class="skill__name">GitHub</span>
+                                <span class="skill__level">92%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-aws skill__icon" style="color: #FF9900;"></i>
+                                <span class="skill__name">AWS</span>
+                                <span class="skill__level">78%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-brands fa-docker skill__icon" style="color: #2496ED;"></i>
+                                <span class="skill__name">Docker</span>
+                                <span class="skill__level">80%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-solid fa-code skill__icon" style="color: #007ACC;"></i>
+                                <span class="skill__name">VS Code</span>
+                                <span class="skill__level">95%</span>
+                            </div>
+                            <div class="skill__card">
+                                <i class="fa-solid fa-gears skill__icon" style="color: #007ACC;"></i>
+                                <span class="skill__name">Devops</span>
+                                <span class="skill__level">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications section" id="certifications">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <span class="section__subtitle">Accreditations & Credentials</span>
+                    <h2 class="section__title">Certifications</h2>
+                </div>
+
+                <div class="certifications__grid grid reveal-up" id="certificationsGrid">
+                    <!-- Certificate 1 -->
+                    <div class="cert__card">
+                        <div class="cert__img-wrapper">
+                            <img src="./assets/AWS Training.png" alt="AWS Training Certificate" class="cert__img" loading="lazy">
+                            <div class="cert__overlay">
+                                <button class="btn btn-sm cert-zoom-btn" data-img="./assets/AWS Training.png"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</button>
+                            </div>
+                        </div>
+                        <div class="cert__content">
+                            <h3 class="cert__title">AWS Certified Solutions Architect</h3>
+                            <p class="cert__issuer">Besant technologies</p>
+                            <div class="cert__details">
+                                <span><i class="fa-regular fa-calendar"></i> Issued: 05/05/2026</span>
+                                <span><i class="fa-solid fa-id-badge"></i> ID: AWS-137759</span>
+                            </div>
+                            <!--<a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer" class="cert__link">Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>-->
+                        </div>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="cert__card">
+                        <div class="cert__img-wrapper">
+                            <img src="./assets/Angular JS Training.png" alt="Angular JS Training" class="cert__img" loading="lazy">
+                            <div class="cert__overlay">
+                                <button class="btn btn-sm cert-zoom-btn" data-img="./assets/Angular JS Training.png"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</button>
+                            </div>
+                        </div>
+                        <div class="cert__content">
+                            <h3 class="cert__title">Angular JS Training</h3>
+                            <p class="cert__issuer">Besant technologies</p>
+                            <div class="cert__details">
+                                <span><i class="fa-regular fa-calendar"></i> Issued: 09/03/2026</span>
+                                <span><i class="fa-solid fa-id-badge"></i> ID: 137759</span>
+                            </div>
+                            <!--<a href="https://oracle.com" target="_blank" rel="noopener noreferrer" class="cert__link">Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a> -->
+                        </div>
+                    </div>
+
+                    <!-- Certificate 3 (Hidden initially for Show More demonstration) -->
+                    <div class="cert__card hidden-item">
+                        <div class="cert__img-wrapper">
+                            <img src="./assets/Java Training.png" alt="Java Training" class="cert__img" loading="lazy">
+                            <div class="cert__overlay">
+                                <button class="btn btn-sm cert-zoom-btn" data-img="./assets/Java Training.png"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</button>
+                            </div>
+                        </div>
+                        <div class="cert__content">
+                            <h3 class="cert__title">Java Training</h3>
+                            <p class="cert__issuer">Besant technologies</p>
+                            <div class="cert__details">
+                                <span><i class="fa-regular fa-calendar"></i> Issued: 16/12/2025</span>
+                                <span><i class="fa-solid fa-id-badge"></i> ID: 137759</span>
+                            </div>
+                           <!-- <a href="https://coursera.org" target="_blank" rel="noopener noreferrer" class="cert__link">Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>-->
+                        </div>
+                    </div>
+
+                    <!-- Certificate 4 (Hidden initially) -->
+                    <div class="cert__card hidden-item">
+                        <div class="cert__img-wrapper">
+                            <img src="./assets/Website desiging Training.png" alt="Website Designing Training" class="cert__img" loading="lazy">
+                            <div class="cert__overlay">
+                                <button class="btn btn-sm cert-zoom-btn" data-img="./assets/Website desiging Training.png"><i class="fa-solid fa-magnifying-glass-plus"></i> View Certificate</button>
+                            </div>
+                        </div>
+                        <div class="cert__content">
+                            <h3 class="cert__title">Website Designing Training</h3>
+                            <p class="cert__issuer">Besant technologies</p>
+                            <div class="cert__details">
+                                <span><i class="fa-regular fa-calendar"></i> Issued: 06/01/2026</span>
+                                <span><i class="fa-solid fa-id-badge"></i> ID: 137759</span>
+                            </div>
+                            <!--<a href="https://mongodb.com" target="_blank" rel="noopener noreferrer" class="cert__link">Verify Credential <i class="fa-solid fa-arrow-up-right-from-square"></i></a>-->
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="show-more-container reveal-up">
+                    <button class="btn btn-outline" id="certShowMoreBtn">Show More Certifications <i class="fa-solid fa-chevron-down"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <span class="section__subtitle">Portfolio Showcase</span>
+                    <h2 class="section__title">Featured Projects</h2>
+                </div>
+
+                <div class="projects__grid grid reveal-up" id="projectsGrid">
+                    <!-- Project 1 -->
+                    <div class="project__card">
+                        <div class="project__img-wrapper">
+                            <img src="./assets/Event Website.png" alt="Event Website" class="project__img" loading="lazy">
+                            <div class="project__category-badge">Full-Stack</div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Event Management Website</h3>
+                            <p class="project__description">
+                               A modern and fully responsive Event Management Company website built with HTML, CSS, and JavaScript, featuring elegant event showcases, service sections, smooth animations, and a simple, user-friendly interface
+                            </p>
+                            <div class="project__techs">
+                                <span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+                            </div>
+                            <div class="project__buttons">
+                                <a href="https://github.com/muthumuthu11367/Event-Management" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://event-management-nine-eosin.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary"><i class="fa-solid fa-external-link"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project__card">
+                        <div class="project__img-wrapper">
+                            <img src="./assets/Screenshot 2026-08-17 105438.png" alt="AI Task Management Dashboard" class="project__img" loading="lazy">
+                            <div class="project__category-badge">Frontend / AI</div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">AI Task Management Dashboard</h3>
+                            <p class="project__description">
+                                An intelligent project management application featuring drag-and-drop Kanban boards, automated priority sorting, and real-time collaboration.
+                            </p>
+                            <div class="project__techs">
+                                <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>REST API</span><span>Firebase</span>
+                            </div>
+                            <div class="project__buttons">
+                                <a href="https://github.com/muthumuthu11367/sup.in" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://sup-in-psi.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary"><i class="fa-solid fa-external-link"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                  <!-- Project 3
+                    <div class="project__card">
+                        <div class="project__img-wrapper">
+                            <img src="./assets/images/projects/project-3.jpg" alt="Real-Time Crypto Tracker" class="project__img" loading="lazy">
+                            <div class="project__category-badge">Web Application</div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Real-Time Crypto Tracker</h3>
+                            <p class="project__description">
+                                Advanced cryptocurrency analytics platform delivering live websocket price updates, interactive historical charts, and personalized portfolio tracking.
+                            </p>
+                            <div class="project__techs">
+                                <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>WebSockets</span>
+                            </div>
+                            <div class="project__buttons">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#contact" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary"><i class="fa-solid fa-external-link"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Project 4 (Hidden initially for Show More demonstration) -->
+                 <!--   <div class="project__card hidden-item">
+                        <div class="project__img-wrapper">
+                            <img src="./assets/images/projects/project-1.jpg" alt="Cloud Storage & File Sharing App" class="project__img" loading="lazy">
+                            <div class="project__category-badge">Cloud & DevOps</div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Cloud Storage & File Sharing App</h3>
+                            <p class="project__description">
+                                Secure cloud storage platform supporting multi-part file uploads, encrypted client-side data sharing, and AWS S3 object management.
+                            </p>
+                            <div class="project__techs">
+                                <span>Python</span><span>Flask</span><span>AWS S3</span><span>Docker</span><span>PostgreSQL</span>
+                            </div>
+                            <div class="project__buttons">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#contact" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary"><i class="fa-solid fa-external-link"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Project 5 (Hidden initially) -->
+                  <!--  <div class="project__card hidden-item">
+                        <div class="project__img-wrapper">
+                            <img src="./assets/images/projects/project-2.jpg" alt="Healthcare Patient Portal" class="project__img" loading="lazy">
+                            <div class="project__category-badge">Enterprise</div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Healthcare Patient Portal</h3>
+                            <p class="project__description">
+                                HIPAA-compliant medical portal enabling secure doctor appointment scheduling, telemedicine video consultations, and electronic health records.
+                            </p>
+                            <div class="project__techs">
+                                <span>Java</span><span>Spring Boot</span><span>Angular</span><span>MySQL</span><span>WebRTC</span>
+                            </div>
+                            <div class="project__buttons">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="#contact" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary"><i class="fa-solid fa-external-link"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show-more-container reveal-up">
+                    <button class="btn btn-outline" id="projectShowMoreBtn">Show More Projects <i class="fa-solid fa-chevron-down"></i></button>
+                </div>
+            </div> -->
+        </section>
+
+        <!-- Customer Reviews / Testimonials Section -->
+        <section class="reviews section" id="reviews">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <span class="section__subtitle">Client Feedback</span>
+                    <h2 class="section__title">Testimonials</h2>
+                </div>
+
+                <div class="reviews__slider-wrapper reveal-up">
+                    <div class="reviews__track" id="reviewsTrack">
+                        <!-- Review 1 -->
+                        <div class="review__card">
+                            <div class="review__header-info">
+                                <img src="./assets/photo-1508341591423-4347099e1f19.avif" alt="Sarah Jenkins" class="review__client-img">
+                                <div>
+                                    <h4 class="review__client-name">Sarah Jenkins</h4>
+                                    <p class="review__client-role">CTO at FinTech Solutions</p>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review__text">
+                                "Muthu delivered our microservices architecture ahead of schedule with immaculate documentation and zero downtime upon deployment. A true professional who understands both code and business requirements."
+                            </p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review__card">
+                            <div class="review__header-info">
+                                <img src="./assets/photo-1522529599102-193c0d76b5b6.avif" alt="Marcus Vance" class="review__client-img">
+                                <div>
+                                    <h4 class="review__client-name">Marcus Vance</h4>
+                                    <p class="review__client-role">Product Manager at PixelCraft</p>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review__text">
+                                "Working with Muthu was an absolute pleasure. The frontend interfaces created for our enterprise dashboard were exceptionally sleek, fast, and responsive across all devices."
+                            </p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review__card">
+                            <div class="review__header-info">
+                                <img src="./assets/premium_photo-1690407617542-2f210cf20d7e.avif" alt="Elena Rostova" class="review__client-img">
+                                <div>
+                                    <h4 class="review__client-name">Elena Rostova</h4>
+                                    <p class="review__client-role">Founder of HealthTech Labs</p>
+                                </div>
+                            </div>
+                            <div class="review__stars">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="review__text">
+                                "Muthu's technical expertise in full-stack engineering ensured our healthcare application met strict regulatory compliance while maintaining an intuitive user experience."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="slider__controls">
+                        <button class="slider-btn" id="prevReviewBtn" aria-label="Previous Review"><i class="fa-solid fa-chevron-left"></i></button>
+                        <div class="slider__dots" id="sliderDots"></div>
+                        <button class="slider-btn" id="nextReviewBtn" aria-label="Next Review"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header reveal-up">
+                    <span class="section__subtitle">Get in Touch</span>
+                    <h2 class="section__title">Contact Me</h2>
+                </div>
+
+                <div class="contact__container grid reveal-up">
+                    <div class="contact__info">
+                        <h3>Let's Talk About Everything!</h3>
+                        <p>Don't hesitate to reach out for project collaborations, job opportunities, or just a friendly developer chat.</p>
+
+                        <div class="contact__details-list">
+                            <div class="contact__detail-item">
+                                <div class="contact__icon-box"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:muthumuthu11367@gmail.com">muthumuthu11367@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__detail-item">
+                                <div class="contact__icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                   <a href="https://wa.me/919080808483?text=Hi,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" rel="noopener noreferrer">+91 908080 8483</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__detail-item">
+                                <div class="contact__icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Tamil Nadu, India</p>
+                                </div>
+                            </div>
+
+                            <div class="contact__detail-item">
+                                <div class="contact__icon-box"><i class="fa-solid fa-circle-check" style="color: #10B981;"></i></div>
+                                <div>
+                                    <h4>Availability</h4>
+                                    <p><span class="status-indicator"></span> Available for Freelance & Full-Time Roles</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__socials">
+                            <a href="https://github.com/muthumuthu11367" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/muthu-t-a9b700336/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/18_muthu_23/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://wa.me/919080808483" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form class="contact__form" id="contactForm" novalidate>
+                        <div class="form__group">
+                            <label for="fullName" class="form__label">Full Name</label>
+                            <input type="text" id="fullName" class="form__input" placeholder="Enter your full name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email Address</label>
+                            <input type="email" id="email" class="form__input" placeholder="Enter your email address" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="subject" class="form__label">Subject</label>
+                            <input type="text" id="subject" class="form__input" placeholder="Enter message subject" required>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message" class="form__label">Message</label>
+                            <textarea id="message" class="form__textarea" rows="5" placeholder="Write your message here..." required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                            <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        
+                        <div class="form-status-alert" id="formStatusAlert"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <a href="#home" class="footer__logo"><span class="logo-icon">&lt;/&gt;</span> Muthu</a>
+                <p>Full-Stack Developer & UI/UX Designer crafting robust, high-performance web applications.</p>
+            </div>
+
+            <div class="footer__links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+           <div class="footer__contact-info">
+    <h4>Connect</h4>
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:muthumuthu11367@gmail.com">muthumuthu11367@gmail.com</a></p>
+    <p><i class="fa-solid fa-phone"></i> <a href="tel:+919080808483">+91 908080 8483</a></p>
+    <div class="footer__socials">
+        <a href="https://github.com/muthumuthu11367" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/muthu-t-a9b700336/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://wa.me/919080808483?text=Hi,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 Muthu. All rights reserved. Built with pure HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919080808483?text=Hi,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+    <!-- Scroll-to-Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Certificate Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="Enlarged Certificate" id="lightboxImg">
+        </div>
+    </div>
+
+    <!-- Success Confirmation Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal__content">
+            <div class="success-modal__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. I have received your message and will get back to you within 24 hours.</p>
+            <button class="btn btn-primary" id="successModalClose">Okay, Thanks</button>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
